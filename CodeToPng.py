@@ -1,6 +1,6 @@
 from pytoimage import PyImage
 from pathlib import Path
-import os
+# import os
 
 
 def pycode_to_img(file_path="codetopng.py"):
@@ -12,7 +12,7 @@ def pycode_to_img(file_path="codetopng.py"):
     code = PyImage(file_path, background=(255, 255, 255))
     palette = {
         'line': (255, 0, 255),
-        'normal':(0, 0, 0)
+        'normal': (0, 0, 0)
     }
 
     code.set_color_palette(palette=palette)
@@ -22,6 +22,7 @@ def pycode_to_img(file_path="codetopng.py"):
     code.save_image(img_name)
 
     return f'{img_name} saved seccessfully'
+
 
 def main():
     file_path = input("Please input file name: ")
